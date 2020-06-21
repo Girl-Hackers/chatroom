@@ -11,35 +11,28 @@
 
 <body>
     <!-- Navigation Bar -->
-    <div class="navbar">
-        <div class="logo">
+        <div class="navbar">
+            <div class="logo">
+                <ul>
+                    <li><a href="index">Home</a></li>
+                </ul>
+            </div>
             <ul>
-                <li><a href="index.html">Home</li></a>
+                <li><a href="about">About</a></li>
+                <li><a href="chatrooms">Chat Rooms</a></li>
+                <li><a href="login">Sign In</a></li>
             </ul>
         </div>
-        <ul>
-            <li><a href="about.html">About</li></a>
-            <li><a href="chatrooms.html">Chat Rooms</li></a>
-            <li><a href="#">Sign In</li></a>
-        </ul>
-    </div>
 
-    <h1>This is the chat room page</h1>
-    <h3>Hi, {%if current_user.is_authenticated%}{{current_user.username}}
-    {%else%}Guest{%endif%}!</h3>
-    <form action="/chat">
-        <div>
-            <label>Username:</label>
-            <input type="text" name="username">
-        </div>
-        <div>
-            <label>Chatroom:</label>
-            <input type="text" name="room">
-        </div>
-        <button type="submit">Submit</button>
-    </form>
+    <h1>Hi, {%if current_user.is_authenticated%}{{current_user.username}}!
+    {%else%}Guest! In order to use the chatroom you need to Log In{%endif%}</h1>
 
-    </div>
+    <button type="button" id="new_room">Create room(nf)</button>
+<ul>
+    {%for room in rooms%}
+        <li><a href="/rooms/{{room._id.room_id}}">{{room.name}}</a></li>
+    {%endfor%}
+</ul>
 
 </body>
 

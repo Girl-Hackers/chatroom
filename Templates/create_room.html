@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Chat Rooms</title>
+    <title>Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation Bar -->
         <div class="navbar">
@@ -22,19 +24,17 @@
             </ul>
         </div>
 
-    <h1>Sign Up</h1>
+    <h1>Create Room</h1>
     <h3>{{message}}</h3>
-    <form method="post" action="/signup">
-        <label>Username:</label>
-        <input type="text" name="username">
+    <form method="post">
+        <label>Room name:</label>
+        <input type="text" name="room_name">
         <br>
-        <label>Email:</label>
-        <input type="text" name="email">
-        <br>
-        <label>Password:</label>
-        <input type="password" name="password">
+        <label>Members:</label>
+        <input type="text" name="members">
         <br>
         <button type="submit">Submit</button>
     </form>
+
 </body>
 </html>

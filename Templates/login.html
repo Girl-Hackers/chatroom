@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Chat Rooms</title>
@@ -7,17 +8,36 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<h1>Login</h1>
-<h3>{{message}}</h3>
-<form method="post" action="/login">
-    <label>Username:</label>
-    <input type="text" name="username">
+    <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="logo">
+                <ul>
+                    <li><a href="index">Home</a></li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="about">About</a></li>
+                <li><a href="chatrooms">Chat Rooms</a></li>
+                <li><a href="login">Sign In</a></li>
+            </ul>
+        </div>
+
+    <h1>Login</h1>
+    <h3>{{message}}</h3>
+    <form method="post" action="/login">
+        <label>Username:</label>
+        <input type="text" name="username">
+        <br>
+        <label>Password:</label>
+        <input type="password" name="password">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
     <br>
-    <label>Password:</label>
-    <input type="password" name="password">
-    <br>
-    <button type=""submit">Submit</button>
-</form>
+    <label>Don't have an account yet?</label>
+    <li><a href="signup">Sign up here</a></li>
 </body>
 </html>

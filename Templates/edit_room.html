@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Chat Rooms</title>
@@ -7,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation Bar -->
         <div class="navbar">
@@ -22,19 +24,17 @@
             </ul>
         </div>
 
-    <h1>Sign Up</h1>
-    <h3>{{message}}</h3>
-    <form method="post" action="/signup">
-        <label>Username:</label>
-        <input type="text" name="username">
-        <br>
-        <label>Email:</label>
-        <input type="text" name="email">
-        <br>
-        <label>Password:</label>
-        <input type="password" name="password">
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+<h1>Edit Room</h1>
+<h3>{{message}}</h3>
+<form method="post">
+    <label>Room name:</label>
+    <input type="text" name="room_name" value="{{room.name}}">
+    <br>
+    <label>Members:</label>
+    <input type="text" name="members" value="{{room_members_str}}">
+    <br>
+    <button type="submit">Submit</button>
+</form>
+<label>Add "Back" button that goes back to the chat</label>
 </body>
 </html>
